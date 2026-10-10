@@ -31,6 +31,7 @@ pipeline {
                 echo 'Running automated tests'
 
                 sh '''
+                    export PYTHONPATH=$PWD
                     .venv/bin/pytest -q
                 '''
             }
